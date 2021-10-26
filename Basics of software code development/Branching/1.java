@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+        	Scanner in = new Scanner(System.in);
+			System.out.print("a, b: ");
+			int x = in.nextInt(), y = in.nextInt();
+			if (x + y < 180) {
+				System.out.print("Существует, ");
+				System.out.println(180 - x - y == 90 ? "прямоугольный." : "непрямоугольный.");
+			}
+        }
+}
