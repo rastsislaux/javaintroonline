@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Linear1 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		System.out.print("a, b, c: ");
@@ -8,5 +8,6 @@ public class Main {
 		System.out.println(
 		        ((a-3)*b/2) + c
 		);
+		in.close();
         }
 }

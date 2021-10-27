@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main 
+public class Branching3 
 {
 	public static boolean isEqual(double x, double y){
         return Math.abs(x-y) < 0.001;
@@ -18,5 +18,6 @@ public class Main
 				k = (y1 - y2) / (x1 - x2),
 				b = y1 - k * x1;
 			System.out.println(isEqual(y3, k*x3+b) ? "На одной прямой." : "На разных прямых.");
+			in.close();
         }
 }

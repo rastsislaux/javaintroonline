@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Cycles5 {
 	public static void main(String[] args) {
         	Scanner in = new Scanner(System.in);
 			System.out.print("e: ");
@@ -11,5 +11,6 @@ public class Main {
 				n++;
 			} while (Math.abs(a) >= e);
 			System.out.println(sum);
+			in.close();
         }
 }

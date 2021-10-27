@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Cycles8 {
 	public static void main(String[] args) {
         	Scanner in = new Scanner(System.in);
 			System.out.print("a, b: ");
@@ -12,5 +12,6 @@ public class Main {
 						System.out.print(" ");
 					}
 			System.out.println();
+			in.close();
         }
 }

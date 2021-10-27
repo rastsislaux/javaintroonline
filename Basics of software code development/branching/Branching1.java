@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Branching1 {
 	public static void main(String[] args) {
         	Scanner in = new Scanner(System.in);
 			System.out.print("a, b: ");
@@ -9,5 +9,6 @@ public class Main {
 				System.out.print("Существует, ");
 				System.out.println(180 - x - y == 90 ? "прямоугольный." : "непрямоугольный.");
 			}
+			in.close();
         }
 }
