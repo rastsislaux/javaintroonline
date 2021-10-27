@@ -1,3 +1,5 @@
+package engineer.leepsky.javaintroonline.basics.linear;
+
 import java.util.Scanner;
 
 public class Linear2 {

@@ -1,3 +1,5 @@
+package engineer.leepsky.javaintroonline.basics.branching;
+
 import java.util.Scanner;
 
 public class Branching2 {
@@ -6,5 +8,6 @@ public class Branching2 {
 			System.out.print("a, b, c, d: ");
 			int a = in.nextInt(), b = in.nextInt(), c = in.nextInt(), d = in.nextInt();
 			System.out.println(Math.max(Math.min(a, b), Math.min(c, d)));
+			in.close();
         }
 }

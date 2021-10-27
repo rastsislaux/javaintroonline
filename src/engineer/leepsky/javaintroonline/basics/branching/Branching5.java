@@ -1,3 +1,5 @@
+package engineer.leepsky.javaintroonline.basics.branching;
+
 import java.util.Scanner;
 
 public class Branching5 {

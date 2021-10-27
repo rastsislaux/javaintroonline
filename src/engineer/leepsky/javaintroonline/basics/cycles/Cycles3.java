@@ -1,3 +1,5 @@
+package engineer.leepsky.javaintroonline.basics.cycles;
+
 import java.util.Scanner;
 
 public class Cycles3 {
