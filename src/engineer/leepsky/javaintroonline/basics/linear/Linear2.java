@@ -3,6 +3,10 @@ package engineer.leepsky.javaintroonline.basics.linear;
 import java.util.Scanner;
 
 public class Linear2 {
+
+	/*  Вычислить значение выражения по формуле (все переменные принимают действительные значения): 
+		(b+sqrt(b^2+4*a*c))/(2*a) - a^3*c+ b^-2 */
+
 	public static void main(String[] args) {
         	Scanner in = new Scanner(System.in);
         	System.out.print("a, b, c: ");

@@ -3,6 +3,11 @@ package engineer.leepsky.javaintroonline.basics.cycles;
 import java.util.Scanner;
 
 public class Cycles5 {
+
+	/* Даны числовой ряд и некоторое число е. Найти сумму тех членов ряда, модуль которых больше или равен
+	   заданному е. Общий член ряда имеет вид:
+	   a_n-1/2^n +1/3^n */
+
 	public static void main(String[] args) {
         	Scanner in = new Scanner(System.in);
 			System.out.print("e: ");
