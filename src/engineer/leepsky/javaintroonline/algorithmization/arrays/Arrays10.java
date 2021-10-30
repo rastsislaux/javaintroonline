@@ -18,10 +18,11 @@ public class Arrays10 {
         System.out.print("a[0-n]: ");
         for (int i = 0; i < n; i++) {
             a[i] = in.nextInt();
-            if (i % 2 == 1) a[i] = 0; 
         }
 
         for (int i = 0; i < n; i++) {
+            if (n-2*i >= 2) a[i] = a[2*i];
+            else a[i] = 0;
             System.out.print(a[i] + " ");
         }
         System.out.println();
