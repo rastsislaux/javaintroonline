@@ -21,7 +21,7 @@ public class Arrays10 {
         }
 
         for (int i = 0; i < n; i++) {
-            if (n-2*i >= 2) a[i] = a[2*i];
+            if (n-2*i+2 > 2) a[i] = a[2*i];
             else a[i] = 0;
             System.out.print(a[i] + " ");
         }
