@@ -11,3 +11,4 @@ This is a repository, where my solutions to this course's practical tasks are st
  ## Algorithmization
  
  - [Arrays](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/algorithmization/arrays)
+ - [Matrix](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/algorithmization/matrix)
