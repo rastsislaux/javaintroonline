@@ -11,7 +11,7 @@ public class Branching4 {
         	Scanner in = new Scanner(System.in);
 			System.out.print("a, b, x, y, z: ");
 			int a = in.nextInt(), b = in.nextInt(), x = in.nextInt(), y = in.nextInt(), z = in.nextInt();
-			System.out.println((a*b > x*y) || (a*b > y*z) || (a*b > z*x));
+			System.out.println((a*b > x*y) && (a*b > y*z) && (a*b > z*x));
 			in.close();
         }
 }
