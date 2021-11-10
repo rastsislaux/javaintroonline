@@ -1,5 +1,6 @@
 package engineer.leepsky.javaintroonline.basics.branching;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Branching1 {
@@ -8,6 +9,7 @@ public class Branching1 {
 	   он прямоугольным. */
 
 	public static void main(String[] args) {
+		try {
         	Scanner in = new Scanner(System.in);
 			System.out.print("a, b: ");
 			int x = in.nextInt(), y = in.nextInt();
@@ -16,5 +18,8 @@ public class Branching1 {
 				System.out.println(180 - x - y == 90 ? "прямоугольный." : "непрямоугольный.");
 			}
 			in.close();
-        }
+		} catch (InputMismatchException e) {
+			System.out.println("\nInput error! " + e.getMessage());
+		}
+    }
 }

@@ -1,5 +1,6 @@
 package engineer.leepsky.javaintroonline.basics.branching;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Branching5 {
@@ -9,10 +10,14 @@ public class Branching5 {
        если x>3 1/(x^3+6) */
 
 	public static void main(String[] args) {
+		try {
         	Scanner in = new Scanner(System.in);
 			System.out.print("x: ");
 			double x = in.nextDouble();
 			System.out.println(x > 3 ? 1 / (Math.pow(x, 3) + 6) : Math.pow(x, 2) - 3 * x + 9);
 			in.close();
-        }
+		} catch (InputMismatchException e) {
+			System.out.println("\nInput error! " + e.getMessage());
+		}
+    }
 }

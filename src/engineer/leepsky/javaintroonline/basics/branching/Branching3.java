@@ -1,5 +1,6 @@
 package engineer.leepsky.javaintroonline.basics.branching;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Branching3 
@@ -12,6 +13,7 @@ public class Branching3
     }
 
 	public static void main(String[] args) {
+		try {
         	Scanner in = new Scanner(System.in);
 			System.out.print("(x, y) * 3: ");
 			double x1 = in.nextDouble(),
@@ -24,5 +26,8 @@ public class Branching3
 				b = y1 - k * x1;
 			System.out.println(isEqual(y3, k*x3+b) ? "На одной прямой." : "На разных прямых.");
 			in.close();
-        }
+		} catch (InputMismatchException e) {
+			System.out.println("\nInput error! " + e.getMessage());
+		}
+    }
 }

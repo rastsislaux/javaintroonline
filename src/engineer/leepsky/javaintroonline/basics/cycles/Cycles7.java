@@ -1,5 +1,6 @@
 package engineer.leepsky.javaintroonline.basics.cycles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Cycles7 {
@@ -8,12 +9,16 @@ public class Cycles7 {
 	   m и n вводятся с клавиатуры. */
 
 	public static void main(String[] args) {
-        	Scanner in = new Scanner(System.in);
-			System.out.print("m, n: ");
-			int m = in.nextInt(), n = in.nextInt();
-			for(int i = m; i <= n; i++)
-				for (int j = 2; j < i; j++)
-					if ((i % j) == 0) System.out.format("Делитель %d - %d\n", i, j);
-			in.close();
+			try {
+				Scanner in = new Scanner(System.in);
+				System.out.print("m, n: ");
+				int m = in.nextInt(), n = in.nextInt();
+				for(int i = m; i <= n; i++)
+					for (int j = 2; j < i; j++)
+						if ((i % j) == 0) System.out.format("Делитель %d - %d\n", i, j);
+				in.close();
+			} catch (InputMismatchException e) {
+				System.out.println("\nInput error! " + e.getMessage());
+			}
         }
 }

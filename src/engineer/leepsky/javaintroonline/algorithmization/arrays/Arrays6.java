@@ -1,5 +1,6 @@
 package engineer.leepsky.javaintroonline.algorithmization.arrays;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Arrays6 {
@@ -20,17 +21,21 @@ public class Arrays6 {
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("n: ");
-        int n = in.nextInt(), sum = 0;
-        int[] a = new int[n];
-        System.out.print("a[0-n]: ");
-        for (int i = 0; i < n; i++) {
-            a[i] = in.nextInt();
-            if (isPrime(i)) sum += a[i];
+        try {
+            Scanner in = new Scanner(System.in);
+            System.out.print("n: ");
+            int n = in.nextInt(), sum = 0;
+            int[] a = new int[n];
+            System.out.print("a[0-n]: ");
+            for (int i = 0; i < n; i++) {
+                a[i] = in.nextInt();
+                if (isPrime(i)) sum += a[i];
+            }
+            System.out.println(sum);
+            in.close();
+        } catch (InputMismatchException e) {
+            System.out.println("\nInput error! " + e.getMessage());
         }
-        System.out.println(sum);
-        in.close();
     }
     
 }

@@ -1,5 +1,6 @@
 package engineer.leepsky.javaintroonline.algorithmization.arrays;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Arrays10 {
@@ -9,25 +10,33 @@ public class Arrays10 {
 
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
-        
-        System.out.print("n: ");
-        int n = in.nextInt();
-        int[] a = new int[n];
+        try {
 
-        System.out.print("a[0-n]: ");
-        for (int i = 0; i < n; i++) {
-            a[i] = in.nextInt();
+            Scanner in = new Scanner(System.in);
+            
+            System.out.print("n: ");
+            int n = in.nextInt();
+            int[] a = new int[n];
+
+            System.out.print("a[0-n]: ");
+            for (int i = 0; i < n; i++) {
+                a[i] = in.nextInt();
+            }
+
+            for (int i = 0; i < n; i++) {
+                if (n-2*i+2 > 2) a[i] = a[2*i];
+                else a[i] = 0;
+                System.out.print(a[i] + " ");
+            }
+            System.out.println();
+
+            in.close();
+
+        } catch (InputMismatchException e) {
+
+            System.out.println("\nInput error! " + e.getMessage());
+
         }
-
-        for (int i = 0; i < n; i++) {
-            if (n-2*i+2 > 2) a[i] = a[2*i];
-            else a[i] = 0;
-            System.out.print(a[i] + " ");
-        }
-        System.out.println();
-
-        in.close();
 
     }
     
