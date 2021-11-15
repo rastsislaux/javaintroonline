@@ -1,5 +1,6 @@
 package engineer.leepsky.javaintroonline.algorithmization.sort;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Sort1 {
@@ -63,17 +64,25 @@ public class Sort1 {
     
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
+        try {
 
-        System.out.print("n, m, k: ");
-        int n = in.nextInt(), m = in.nextInt(), k = in.nextInt();
+            Scanner in = new Scanner(System.in);
 
-        System.out.println("arrays: ");
-        int[] first = scanArray(n, in), second = scanArray(m, in);
+            System.out.print("n, m, k: ");
+            int n = in.nextInt(), m = in.nextInt(), k = in.nextInt();
 
-        in.close();
+            System.out.println("arrays: ");
+            int[] first = scanArray(n, in), second = scanArray(m, in);
 
-        printArray(combineArrays(first, second, k));
+            in.close();
+
+            printArray(combineArrays(first, second, k));
+
+        } catch (InputMismatchException e) {
+
+            System.out.println("\nInput error! " + e.getMessage());
+
+        }
 
     }
 
