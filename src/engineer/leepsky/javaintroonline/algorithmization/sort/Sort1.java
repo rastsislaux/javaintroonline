@@ -25,9 +25,9 @@ public class Sort1 {
 
     public static void printArray(int[] array) {
 
-        for (int i = 0; i < array.length; i++) {
+        for (int value : array) {
 
-            System.out.print(array[i] + " ");
+            System.out.print(value + " ");
 
         }
 
