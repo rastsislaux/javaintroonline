@@ -18,3 +18,4 @@ This is a repository, where my solutions to this course's practical tasks are st
  ## Strings
  
  - [CharArray](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/strings/array)
+ - [String & StringBuilder](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/strings/string)
