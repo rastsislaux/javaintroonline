@@ -48,4 +48,6 @@ Tag:
 	Opening tag: <heading>
 	Inner text: Важное напоминание
 	Closing tag: </heading>
-
+Tag:
+	<body/>
+	Tag with no body.

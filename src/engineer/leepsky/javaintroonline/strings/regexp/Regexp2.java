@@ -11,24 +11,34 @@ public class Regexp2 {
 
     public static String analyzeXML(String xml) {
 
-        Pattern fullTag = Pattern.compile("<([^\\ /<>]+)([^<>]*)>(.*?)<(\\/\\1)>");
+        Pattern fullTag = Pattern.compile("<([^\\ /<>]+)([^<>]*)>(.*?)<(\\/\\1)>|<([^\\ /<>]+)([^<>]*)/>");
         Matcher fullTagMatcher = fullTag.matcher(xml);
 
         StringBuilder result = new StringBuilder();
 
         while ( fullTagMatcher.find() ) {
 
-            result.append("Tag:\n\t<")
-                  .append(fullTagMatcher.group(0))
-                  .append("\n\tOpening tag: <")
-                  .append(fullTagMatcher.group(1))
-                  .append(fullTagMatcher.group(2))
-                  .append(">\n\tInner text: ")
-                  .append(fullTagMatcher.group(3))
-                  .append("\n\tClosing tag: <")
-                  .append(fullTagMatcher.group(4))
-                  .append(">\n")
-                  .append(analyzeXML(fullTagMatcher.group(3)));
+            if ( fullTagMatcher.group(3) != null ) {
+
+                result.append("Tag:\n\t")
+                    .append(fullTagMatcher.group(0))
+                    .append("\n\tOpening tag: <")
+                    .append(fullTagMatcher.group(1))
+                    .append(fullTagMatcher.group(2))
+                    .append(">\n\tInner text: ")
+                    .append(fullTagMatcher.group(3))
+                    .append("\n\tClosing tag: <")
+                    .append(fullTagMatcher.group(4))
+                    .append(">\n")
+                    .append(analyzeXML(fullTagMatcher.group(3)));
+
+            } else {
+
+                result.append("Tag:\n\t")
+                      .append(fullTagMatcher.group(0))
+                      .append("\n\tTag with no body.");
+
+            }
 
         }
 
