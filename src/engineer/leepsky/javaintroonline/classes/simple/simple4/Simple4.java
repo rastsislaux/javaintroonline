@@ -42,10 +42,11 @@ public class Simple4 {
                 n = in.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Illegal input!");
+                in.close();
                 return;
             }
 
-            if (n < 0) break;
+            if (n < 0) { in.close(); break; }
 
             int index = Train.findTrainByNumber(trains, n);
 
@@ -54,8 +55,6 @@ public class Simple4 {
             );
 
         }
-
-        in.close();
 
     }
     
