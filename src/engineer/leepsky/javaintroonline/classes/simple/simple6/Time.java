@@ -30,18 +30,6 @@ public class Time {
 
     }
 
-    public int getHour() {
-        return hour;
-    }
-
-    public int getMinute() {
-        return minute;
-    }
-
-    public int getSecond() {
-        return second;
-    }
-
     public void setHour(int hour) {
 
         if (hour > 24 || hour < 0)

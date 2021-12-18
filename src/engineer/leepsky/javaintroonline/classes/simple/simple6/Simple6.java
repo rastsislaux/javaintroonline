@@ -1,7 +1,5 @@
 package engineer.leepsky.javaintroonline.classes.simple.simple6;
 
-import java.util.concurrent.Flow.Subscriber;
-
 public class Simple6 {
 
     /* Составьте описание класса для представления времени. Предусмотрте возможности установки времени и
@@ -36,21 +34,21 @@ public class Simple6 {
             myTime.toString()
         );
 
-        myTime = new Time(25, 61, 61);
+        myTime = new Time(25, 61, 61); // Constructor with wrong arguements
 
         System.out.println(
             myTime.toString()
         );
 
-        myTime.setHour(12);
+        myTime.setHour(12);     // Setters
         myTime.setMinute(30);
         myTime.setSecond(30);
-
+        
         System.out.println(
             myTime.toString()
         );
 
-        myTime.setHour(25);
+        myTime.setHour(25);     // Setters with wrong parameters
         myTime.setMinute(61);
         myTime.setSecond(61);
 
