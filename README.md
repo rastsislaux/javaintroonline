@@ -15,8 +15,12 @@ This is a repository, where my solutions to this course's practical tasks are st
  - [Sort](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/algorithmization/sort)
  - [Decomposition](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/algorithmization/decomposition)
  
- ## Strings
+ ## Strings and basics of text processing
  
  - [CharArray](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/strings/array)
  - [String & StringBuilder](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/strings/string)
  - [Regexp](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/strings/regexp)
+
+## Programming with classes
+
+ - [Simple](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/classes/simple)
