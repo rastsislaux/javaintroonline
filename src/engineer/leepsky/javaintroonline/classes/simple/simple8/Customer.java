@@ -25,6 +25,18 @@ public class Customer {
 
     }
 
+    Customer(Customer original) {
+
+        this.id             =   original.id;
+        this.surname        =   original.surname;
+        this.name           =   original.name;
+        this.patronim       =   original.patronim;
+        this.address        =   original.address;
+        this.creditCard     =   original.creditCard;
+        this.bankAccount    =   original.bankAccount;
+
+    }
+
     // Getters
             
     public int getID() { return id; }

@@ -22,13 +22,14 @@ public class Simple8 {
 
         CustomerList alphabetically = customerList.getCustomersAlphabetically();
 
+        System.out.println("Customers in alphabetical order:");
         for (int i = 0; i < alphabetically.size(); i++)
             System.out.println(alphabetically.get(i).toString());
 
         System.out.println();
 
         CustomerList cardsInRange = customerList.getCustomersInRange(2, 4);
-
+        System.out.println("Customers with credit cards in range from 2 to 4:");
         for (int i = 0; i < cardsInRange.size(); i++)
             System.out.println(cardsInRange.get(i).toString());
 
