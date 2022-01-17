@@ -11,7 +11,13 @@ public class Time {
 
     private int hour, minute, second;
 
-    Time(int hour, int minute, int second) {
+    public Time(Time orig) {
+        this.hour = orig.hour;
+        this.minute = orig.minute;
+        this.second = orig.second;
+    }
+
+    public Time(int hour, int minute, int second) {
 
         if (hour > 24 || hour < 0)
             this.hour = DEFAULT_VALUE;
@@ -81,6 +87,10 @@ public class Time {
         this.second = seconds;
         addMinutes(minutes);
 
+    }
+    
+    public int toInt() {
+        return hour * 3600 + minute * 60 + second;
     }
 
     public String toString() {
