@@ -1,0 +1,53 @@
+Tag:
+	<notes><note id = "1"><to>Вася</to><from>Света</from><heading>Напоминание</heading><body>Позвони мне завтра!</body></note><note id = "2"><to>Петя</to><from>Маша</from><heading>Важное напоминание</heading><body/></note></notes>
+	Opening tag: <notes>
+	Inner text: <note id = "1"><to>Вася</to><from>Света</from><heading>Напоминание</heading><body>Позвони мне завтра!</body></note><note id = "2"><to>Петя</to><from>Маша</from><heading>Важное напоминание</heading><body/></note>
+	Closing tag: </notes>
+Tag:
+	<note id = "1"><to>Вася</to><from>Света</from><heading>Напоминание</heading><body>Позвони мне завтра!</body></note>
+	Opening tag: <note id = "1">
+	Inner text: <to>Вася</to><from>Света</from><heading>Напоминание</heading><body>Позвони мне завтра!</body>
+	Closing tag: </note>
+Tag:
+	<to>Вася</to>
+	Opening tag: <to>
+	Inner text: Вася
+	Closing tag: </to>
+Tag:
+	<from>Света</from>
+	Opening tag: <from>
+	Inner text: Света
+	Closing tag: </from>
+Tag:
+	<heading>Напоминание</heading>
+	Opening tag: <heading>
+	Inner text: Напоминание
+	Closing tag: </heading>
+Tag:
+	<body>Позвони мне завтра!</body>
+	Opening tag: <body>
+	Inner text: Позвони мне завтра!
+	Closing tag: </body>
+Tag:
+	<note id = "2"><to>Петя</to><from>Маша</from><heading>Важное напоминание</heading><body/></note>
+	Opening tag: <note id = "2">
+	Inner text: <to>Петя</to><from>Маша</from><heading>Важное напоминание</heading><body/>
+	Closing tag: </note>
+Tag:
+	<to>Петя</to>
+	Opening tag: <to>
+	Inner text: Петя
+	Closing tag: </to>
+Tag:
+	<from>Маша</from>
+	Opening tag: <from>
+	Inner text: Маша
+	Closing tag: </from>
+Tag:
+	<heading>Важное напоминание</heading>
+	Opening tag: <heading>
+	Inner text: Важное напоминание
+	Closing tag: </heading>
+Tag:
+	<body/>
+	Tag with no body.
