@@ -24,3 +24,4 @@ This is a repository, where my solutions to this course's practical tasks are st
 ## Programming with classes
 
  - [Simple](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/classes/simple)
+ - [Aggregation](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/classes/aggregation)
