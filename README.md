@@ -25,3 +25,9 @@ This is a repository, where my solutions to this course's practical tasks are st
 
  - [Simple](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/classes/simple)
  - [Aggregation](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/classes/aggregation)
+
+## Basic of Object-oriented programming
+
+ - [Textfile](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/oop/oop1)
+ - [Payment](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/oop/oop2)
+ - [Calendar](https://github.com/ungaf/javaintroonline/tree/master/src/engineer/leepsky/javaintroonline/oop/oop3)
