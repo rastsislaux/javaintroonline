@@ -1,0 +1,28 @@
+test
+[Wed Feb 02 18:00:58 MSK 2022] New book added to library!
+admin
+[Wed Feb 02 18:00:58 MSK 2022] New book added to library!
+admin
+[Wed Feb 02 18:16:59 MSK 2022] User test proposes to add a book: ProposedBook by ProposedAuthor, printed
+test
+[Wed Feb 02 18:18:50 MSK 2022] New book (ProposedBook) added to library!
+admin
+[Wed Feb 02 18:18:50 MSK 2022] New book (ProposedBook) added to library!
+test
+[Wed Feb 02 18:20:48 MSK 2022] New book (sdfsd) added to library!
+admin
+[Wed Feb 02 18:20:48 MSK 2022] New book (sdfsd) added to library!
+test
+[Wed Feb 02 18:21:22 MSK 2022] Wed Feb 02 18:21:22 MSK 2022New book (111) added to library!
+admin
+[Wed Feb 02 18:21:22 MSK 2022] Wed Feb 02 18:21:22 MSK 2022New book (111) added to library!
+test
+[Wed Feb 02 18:22:20 MSK 2022] New book (hey) added to library!
+admin
+[Wed Feb 02 18:22:20 MSK 2022] New book (hey) added to library!
+admin
+[Fri Feb 04 13:41:40 MSK 2022] User test proposes to add a book: ProposedBookFor2Admins by SomeAuthor, printed
+admin
+[Fri Feb 04 13:43:34 MSK 2022] User test proposes to add a book: ProposedTo2Admins by SomeAuthor, printed
+admin2
+[Fri Feb 04 13:43:34 MSK 2022] User test proposes to add a book: ProposedTo2Admins by SomeAuthor, printed
