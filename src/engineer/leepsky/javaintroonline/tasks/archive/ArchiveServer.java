@@ -8,6 +8,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 public class ArchiveServer {
@@ -23,10 +26,14 @@ public class ArchiveServer {
         this.archive = archive;
     }
 
-    public void accept(int port) throws IOException {
+    public void start(int port) throws IOException {
 
         serverSocket = new ServerSocket(port);
         System.out.println("Server started on port " + port);
+
+    }
+
+    public boolean accept() throws IOException, ClassNotFoundException { // Returns true if server needs to be shutdown.
 
         clientSocket = serverSocket.accept();
         System.out.println("Connection accepted.");
@@ -38,28 +45,66 @@ public class ArchiveServer {
 
         while (true) {
             msg = in.readLine();
-            if (msg == null) break;
+
+            if (msg == null) break;                  // Client disconnected.
+            if (msg.equals("SHUTDOWN")) return true; // Shutdown command received.
+
             out.println(handle(msg));
         }
 
+        return false;
+
     }
 
-    public String handle(String msg) {
+    public String handle(String msg) throws IOException, ClassNotFoundException {
 
         switch (msg) {
 
-            case "LENGTH" -> {
+            case "SIZE" -> {
                 System.out.println("Client requested length. Returned: " + archive.size());
                 return String.valueOf(archive.size());
+            }
+
+            case "EDIT" -> {
+
+                out.println("OK");
+                System.out.println("Client wants to edit file. Waiting for index...");
+                int index;
+                try { index = Integer.parseInt(in.readLine()); out.println("OK"); }
+                catch (NumberFormatException e) { return "FAIL"; }
+
+                System.out.println("Client sent index. Waiting for object...");
+                PersonalFile personalFile;
+                try { personalFile = (PersonalFile) ObjectString.fromString(in.readLine()); }
+                catch ( EOFException e ) { return "FAIL"; }
+
+                archive.set(index, personalFile);
+                System.out.println("Personal file was edited.");
+                return "OK";
+
             }
 
         }
 
         try {
+
+            PersonalFile personalFile = (PersonalFile) ObjectString.fromString(msg);
+            archive.add(personalFile);
+            return "OK";
+
+        } catch (EOFException | IllegalArgumentException e) { }
+
+        try {
+
             int index = Integer.parseInt(msg);
+            System.out.println("Client requested personal file #" + index);
             return ObjectString.toString(archive.get(index));
-        } catch (NumberFormatException | IOException e) {
+
+        } catch (NumberFormatException | IOException | IndexOutOfBoundsException e) {
+
+            System.out.println("Request failed: " + e.getMessage());
             return "FAIL";
+
         }
 
     }
@@ -100,19 +145,38 @@ public class ArchiveServer {
             }
             archive.add(new PersonalFile(name, info));
         }
-        System.out.println(archive);
         return archive;
     }
 
-    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
+    public static void saveArchiveXML(ArrayList<PersonalFile> archive, String path) throws IOException {
+
+        StringBuilder sb = new StringBuilder("<?xml version=\"1.1\" encoding=\"UTF-8\" ?>\n<archive>\n\n");
+        for (PersonalFile personalFile : archive) {
+            sb.append("\t<person>\n\t\t<name>")
+              .append(personalFile.getName())
+              .append("</name>\n\t\t<info>")
+              .append(personalFile.getInfo())
+              .append("</info>\n\t</person>\n\n");
+        }
+        sb.append("</archive>");
+
+        Files.writeString(Path.of(path), sb.toString(), StandardOpenOption.CREATE);
+
+    }
+
+    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException, ClassNotFoundException {
 
         ArrayList<PersonalFile> archive = parseArchiveXML(ARCHIVE_FILE);
+        ArchiveServer server = new ArchiveServer(archive);
+        server.start(SRV_PORT);
 
-        while (true) {
-            ArchiveServer server = new ArchiveServer(archive);
-            server.accept(SRV_PORT);
-            server.stop();
+        while (!server.accept()) {
+            System.out.println("Client disconnected.");
         }
+
+        System.out.println("Shutdown command received.");
+        saveArchiveXML(archive, ARCHIVE_FILE);
+        server.stop();
 
     }
 

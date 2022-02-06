@@ -1,19 +1,29 @@
 <?xml version="1.1" encoding="UTF-8" ?>
 <archive>
 
-    <person>
-        <name>Firstman A.</name>
-        <info>Firstman A. is a good person.</info>
-    </person>
+	<person>
+		<name>Firstman A.</name>
+		<info>Firstman A. is a good person.</info>
+	</person>
 
-    <person>
-        <name>Secondman B.</name>
-        <info>Secondman B. is a good person.</info>
-    </person>
+	<person>
+		<name>Secondman B.</name>
+		<info>Secondman B. is a good person.</info>
+	</person>
 
-    <person name="Thirdman C.">
-        <name>Thirdman C.</name>
-        <info>Thirdman C. is a bad person.</info>
-    </person>
+	<person>
+		<name>Thirdman C.</name>
+		<info>Thirdman C. is a bad person.</info>
+	</person>
+
+	<person>
+		<name>name</name>
+		<info>info</info>
+	</person>
+
+	<person>
+		<name>Hello!</name>
+		<info>World!</info>
+	</person>
 
 </archive>
